@@ -1,0 +1,21 @@
+{
+    "devDependencies": {
+        "@babel/plugin-proposal-class-properties": "^7.3.0",
+        "@babel/preset-react": "^7.0.0",
+        "@symfony/webpack-encore": "^0.22.0",
+        "webpack-notifier": "^1.6.0"
+    },
+    "license": "UNLICENSED",
+    "private": true,
+    "scripts": {
+        "dev-server": "encore dev-server",
+        "dev": "encore dev",
+        "watch": "encore dev --watch",
+        "build": "encore production --progress"
+    },
+    "dependencies": {
+        "prop-types": "^15.7.1",
+        "react": "^16.8.1",
+        "react-dom": "^16.8.1"
+    }
+}

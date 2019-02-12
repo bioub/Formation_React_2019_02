@@ -1,0 +1,12 @@
+{% extends "base.html.twig" %}
+
+{% block title %}AppBundle:React:hello{% endblock %}
+
+{% block body %}
+<h1>Welcome to the React:hello page</h1>
+<div id="root"></div>
+{% endblock %}
+
+{% block javascripts %}
+{{ encore_entry_script_tags('hello') }}
+{% endblock %}
