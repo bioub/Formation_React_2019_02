@@ -17,6 +17,9 @@
 		},
 		{
 			"path": "symfony-react"
+		},
+		{
+			"path": "hello-router"
 		}
 	],
 	"settings": {}

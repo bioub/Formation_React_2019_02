@@ -1,24 +1,17 @@
 {
   "entrypoints": {
-    "app": {
-      "js": [
-        "http://localhost:8080/build/runtime.js",
-        "http://localhost:8080/build/app.js"
-      ],
-      "css": [
-        "http://localhost:8080/build/app.css"
-      ]
-    },
     "counter": {
       "js": [
-        "http://localhost:8080/build/runtime.js",
-        "http://localhost:8080/build/counter.js"
+        "/build/runtime.fa8f03f5.js",
+        "/build/0.8e7066ca.js",
+        "/build/counter.f6ae8c80.js"
       ]
     },
     "hello": {
       "js": [
-        "http://localhost:8080/build/runtime.js",
-        "http://localhost:8080/build/hello.js"
+        "/build/runtime.fa8f03f5.js",
+        "/build/0.8e7066ca.js",
+        "/build/hello.80507bb3.js"
       ]
     }
   }

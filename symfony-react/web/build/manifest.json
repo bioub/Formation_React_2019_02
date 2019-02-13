@@ -1,7 +1,6 @@
 {
-  "build/app.css": "http://localhost:8080/build/app.css",
-  "build/app.js": "http://localhost:8080/build/app.js",
-  "build/counter.js": "http://localhost:8080/build/counter.js",
-  "build/hello.js": "http://localhost:8080/build/hello.js",
-  "build/runtime.js": "http://localhost:8080/build/runtime.js"
+  "build/0.8e7066ca.js": "/build/0.8e7066ca.js",
+  "build/counter.js": "/build/counter.f6ae8c80.js",
+  "build/hello.js": "/build/hello.80507bb3.js",
+  "build/runtime.js": "/build/runtime.fa8f03f5.js"
 }
