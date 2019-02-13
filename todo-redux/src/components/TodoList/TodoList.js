@@ -2,6 +2,8 @@ import React, { PureComponent } from 'react';
 import { arrayOf, shape, number, bool, string } from 'prop-types';
 import './TodoList.css';
 import { TodoItem } from '../TodoItem/TodoItem';
+import { connect } from 'react-redux';
+
 
 class TodoList extends PureComponent {
   static propTypes = {
@@ -23,7 +25,15 @@ class TodoList extends PureComponent {
   }
 }
 
+function mapStateToProps(state) {
+  return {
+    todos: state.todos,
+  };
+}
+
+const TodoListContainer = connect(mapStateToProps)(TodoList);
 
 export {
   TodoList,
+  TodoListContainer,
 };

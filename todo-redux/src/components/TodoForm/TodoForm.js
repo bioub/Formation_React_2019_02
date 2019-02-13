@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { string, func } from 'prop-types';
 import './TodoForm.css';
+import { connect } from 'react-redux';
 
 class TodoForm extends Component {
   static propTypes = {
@@ -11,11 +12,11 @@ class TodoForm extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    this.props.onNewTodoSubmit(this.props.newTodo);
+    this.props.dispatch({type: 'TODO_ADD', value: {id: Math.random(), text: this.props.newTodo, completed: false}});
   };
 
   handleChange = (event) => {
-    this.props.onNewTodoChange(event.target.value);
+    this.props.dispatch({type: 'TODO_CHANGE', value: event.target.value});
   };
 
   render() {
@@ -28,6 +29,15 @@ class TodoForm extends Component {
   }
 }
 
+function mapStateToProps(state) {
+  return {
+    newTodo: state.newTodo,
+  };
+}
+
+const TodoFormContainer = connect(mapStateToProps)(TodoForm);
+
 export {
   TodoForm,
+  TodoFormContainer,
 };
