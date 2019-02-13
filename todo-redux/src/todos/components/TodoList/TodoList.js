@@ -1,12 +1,12 @@
 import React, { PureComponent } from 'react';
-import { arrayOf, shape, number, bool, string } from 'prop-types';
+import { arrayOf, shape, number, bool, string, func } from 'prop-types';
 import './TodoList.css';
 import { TodoItem } from '../TodoItem/TodoItem';
-import { connect } from 'react-redux';
 
 
 class TodoList extends PureComponent {
   static propTypes = {
+    onDelete: func,
     todos: arrayOf(shape({id: number, text: string, completed: bool})),
   };
 
@@ -15,7 +15,7 @@ class TodoList extends PureComponent {
   // }
 
   render() {
-    const todoItems = this.props.todos.map((todo) => <TodoItem key={todo.id} todo={todo} />)
+    const todoItems = this.props.todos.map((todo) => <TodoItem key={todo.id} todo={todo} onDelete={this.props.onDelete} />)
 
     return (
       <div className="TodoList">
@@ -25,15 +25,7 @@ class TodoList extends PureComponent {
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    todos: state.todos,
-  };
-}
-
-const TodoListContainer = connect(mapStateToProps)(TodoList);
 
 export {
   TodoList,
-  TodoListContainer,
 };
